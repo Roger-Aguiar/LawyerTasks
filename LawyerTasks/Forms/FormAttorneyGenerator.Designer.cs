@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAttorneyGenerator));
             label1 = new Label();
             panel1 = new Panel();
+            textBoxCpf = new TextBox();
             textBoxSpecificPowers = new TextBox();
             label6 = new Label();
             textBoxId = new TextBox();
@@ -44,7 +45,7 @@
             label2 = new Label();
             buttonGenerateAttorney = new Button();
             buttonClose = new Button();
-            textBoxCpf = new TextBox();
+            saveFileDialog1 = new SaveFileDialog();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,6 +78,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(659, 251);
             panel1.TabIndex = 1;
+            // 
+            // textBoxCpf
+            // 
+            textBoxCpf.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxCpf.Location = new Point(265, 7);
+            textBoxCpf.Name = "textBoxCpf";
+            textBoxCpf.Size = new Size(380, 33);
+            textBoxCpf.TabIndex = 0;
             // 
             // textBoxSpecificPowers
             // 
@@ -208,14 +217,6 @@
             buttonClose.UseVisualStyleBackColor = false;
             buttonClose.Click += buttonClose_Click;
             // 
-            // textBoxCpf
-            // 
-            textBoxCpf.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxCpf.Location = new Point(265, 7);
-            textBoxCpf.Name = "textBoxCpf";
-            textBoxCpf.Size = new Size(380, 33);
-            textBoxCpf.TabIndex = 0;
-            // 
             // FormAttorneyGenerator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -256,5 +257,6 @@
         private TextBox textBoxSpecificPowers;
         private Label label6;
         private TextBox textBoxCpf;
+        private SaveFileDialog saveFileDialog1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LawyerTasks.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,8 +24,9 @@ namespace LawyerTasks.Forms
         }
 
         private void buttonGenerateAttorney_Click(object sender, EventArgs e)
-        {
-
+        {            
+            var attorney = new Attorney(SaveFile.Save());
+            attorney.GenerateAttorney();           
         }
 
         private void label4_Click(object sender, EventArgs e)

@@ -17,15 +17,15 @@ namespace LawyerTasks.Classes
 {
     public class Attorney
     {
-        public Attorney()
-        {
+        public string file { get; set; }
 
+        public Attorney(string file)
+        {
+            this.file = file;
         }
 
         public void GenerateAttorney()
         {
-            var file = @"C:\dev\LawyerTasks\LawyerTasks\pdf\attorney.pdf";
-
             using (PdfWriter pdfWriter = new PdfWriter(file, new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
             {
                 var pdfDocument = new PdfDocument(pdfWriter);
@@ -74,7 +74,7 @@ namespace LawyerTasks.Classes
                 document.Close();
                 pdfDocument.Close();
 
-                MessageBox.Show("PDF generated in " + file);
+                MessageBox.Show("Procuração criada com sucesso!", "Procuração", MessageBoxButtons.OK, MessageBoxIcon.Information);
             };
         }
 

@@ -15,8 +15,7 @@ namespace LawyerTasks
 
         private void buttonGeneratePdf_Click(object sender, EventArgs e)
         {
-            var attorney = new Attorney();
-            attorney.GenerateAttorney();
+            
         }
 
         private void buttonExitApplication_Click(object sender, EventArgs e)

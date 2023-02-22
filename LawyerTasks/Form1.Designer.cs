@@ -86,6 +86,7 @@
             buttonGenerateAttorney.TabIndex = 3;
             buttonGenerateAttorney.Text = "Gerar &Procuração";
             buttonGenerateAttorney.UseVisualStyleBackColor = false;
+            buttonGenerateAttorney.Click += buttonGenerateAttorney_Click;
             // 
             // buttonSearchLawyer
             // 

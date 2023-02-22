@@ -31,8 +31,6 @@ namespace LawyerTasks.Classes
                 var pdfDocument = new PdfDocument(pdfWriter);
                 var document = new Document(pdfDocument, PageSize.A4);
 
-                var header = new MigraDoc();
-
                 document.SetMargins(85, 50, 50, 50);
 
                 pdfDocument.AddEventHandler(PdfDocumentEvent.END_PAGE, new EndPageEventHandler(document, pdfDocument));
@@ -120,10 +118,5 @@ namespace LawyerTasks.Classes
 
             return _lawyer;
         }
-
-        /*private class EndPageEventHandler : IEventHandler
-        {
-            
-        }*/
     }
 }

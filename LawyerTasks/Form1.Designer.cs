@@ -74,6 +74,7 @@
             buttonRegisterCustomer.TabIndex = 2;
             buttonRegisterCustomer.Text = "Cadastrar &Cliente";
             buttonRegisterCustomer.UseVisualStyleBackColor = false;
+            buttonRegisterCustomer.Click += buttonRegisterCustomer_Click;
             // 
             // buttonGenerateAttorney
             // 

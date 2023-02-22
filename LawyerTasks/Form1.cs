@@ -29,5 +29,11 @@ namespace LawyerTasks
             FormRegisterLawyer form = new FormRegisterLawyer();
             form.Show();
         }
+
+        private void buttonRegisterCustomer_Click(object sender, EventArgs e)
+        {
+            FormRegisterCustomer form = new FormRegisterCustomer();
+            form.Show();
+        }
     }
 }

@@ -30,8 +30,15 @@ namespace LawyerTasks.Forms
             var attorney = new Attorney(location);
             attorney.GenerateAttorney();
 
-            var email = new EmailSent(location);
-            email.SendEmail();
+            
+            var result = MessageBox.Show("Deseja enviar a procuração por email para assinatura?", "Envio de email", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(result == DialogResult.Yes)
+            {
+                var email = new EmailSent(location);
+                email.SendEmail();
+            }
+            
         }
 
         private void label4_Click(object sender, EventArgs e)

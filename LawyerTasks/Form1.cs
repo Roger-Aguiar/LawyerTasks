@@ -15,7 +15,7 @@ namespace LawyerTasks
 
         private void buttonGeneratePdf_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void buttonExitApplication_Click(object sender, EventArgs e)

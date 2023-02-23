@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 using System.Net;
-using System.ComponentModel;
-
 
 namespace LawyerTasks.Classes
 {
     public class EmailSent
     {
-        private string userName = "rogervisualstudio@gmail.com";
-        private string password = "nqqtywrupjpkgpew";
-        private string host = "smtp.gmail.com";
-        private string emailAddress = "rogervisualstudio@gmail.com";
-        private int port = 587;
-        private string location = "";
+        private readonly string userName = "rogervisualstudio@gmail.com";
+        private readonly string password = "nqqtywrupjpkgpew";
+        private readonly string host = "smtp.gmail.com";
+        private readonly int port = 587;
+        private readonly string location = "";
+        private readonly string to = "rogerdaviola@yahoo.com.br";
 
         public EmailSent(string location) 
         {
             this.location = location;
         }
+
         public void SendEmail()
         {
             try
@@ -36,11 +30,11 @@ namespace LawyerTasks.Classes
                         smtp.Port = port;
                         smtp.EnableSsl = true;
                         smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                        email.From = new MailAddress(emailAddress);
-                        email.To.Add("rogerdaviola@yahoo.com.br");
-                        email.Subject = "Test";
-                        email.Body = "Test body";
-                        email.IsBodyHtml = false;
+                        email.From = new MailAddress(userName);
+                        email.To.Add(to);
+                        email.Subject = "Documentos para assinatura";
+                        email.Body = SetBody();
+                        email.IsBodyHtml = true;
                         email.Attachments.Add(new Attachment(this.location));
                         smtp.Send(email);
 
@@ -51,8 +45,10 @@ namespace LawyerTasks.Classes
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }          
+            }
             
-        }        
+        }
+
+        private string SetBody() => @"<p>Prezado(a), segue em anexo a procuração para fins de análise e assinatura.<p>Qualquer dúvida me coloco à disposição!</p> <p><b>Atenciosamente</b>,</p> <p><i>Dra. Vana Assis.<i>";
     }
 }

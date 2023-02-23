@@ -45,7 +45,6 @@
             label2 = new Label();
             buttonGenerateAttorney = new Button();
             buttonClose = new Button();
-            saveFileDialog1 = new SaveFileDialog();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -257,6 +256,5 @@
         private TextBox textBoxSpecificPowers;
         private Label label6;
         private TextBox textBoxCpf;
-        private SaveFileDialog saveFileDialog1;
     }
 }
